@@ -1,63 +1,155 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+/* Firefox */
+input{
+  -moz-appearance: textfield;
+}
+:root{
+    --shadow:14px 14px 24px black;
+    --primaryColor: #ff7675;
+}
 *{
     margin: 0;
     padding: 0;
 }
-:root{
-    --primary-color:#ff7979;
-}
-input{
-    width: 50px;
-    height: 40px;
-    border-radius: 10px;
-    border: 5px solid white;
-    outline: none;
-    text-align: center;
-    background-color: var(--primary-color);
-    color:white;
-    font-size: 25px;
-}
-#background{
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    background: url('/assets/background.jpeg') no-repeat bottom center;
-    background-size: cover;
-    opacity: 30%;
-    border-radius;
-    
-}
-#content{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform:translate(-50%, -50%);
-    width: 500px;
-    height: 430px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 15px 15px 30px black;
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }
 
-    #content #top, #content #bottom{
+/* Firefox */
+input{
+  -moz-appearance: textfield;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+/* Firefox */
+input{
+  -moz-appearance: textfield;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#background{
+    background:url("/assets/background.jpeg") no-repeat;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    opacity:70%;
+}
+
+#content{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+    #content #title{
+        font-size: 3vw;
+        color:white;
+        margin-bottom: 50px;
+        text-shadow: 2px 2px var(--primaryColor);
+        transition: 400ms;
+    }
+    #content #title:hover{
+        text-shadow: 2px 2px black;
+    }
+    #content #box{
+        width: 20vw;
+        height: 20vw;
+        background-color: var(--primaryColor);
+        margin-bottom: 50px;
+        box-shadow: var(--shadow);
+        transition: 400ms;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    #content #box #reset{
         width: 100%;
+        height: 100%;
+        font-size: 1.6vw;
+        background-color: transparent;
+        cursor: pointer;
+        outline: none;
+        border: none;
+        color:white;
+        font-weight: bold;
+    }
+    #content #box:hover{
+        background-color: #d63031;
+    }
+
+    #content #controller{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        width: 30vw;
+        height: 28vh;
+        padding: 1vw;
+
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: var(--shadow);
+    }
+
+    #content #controller .inputBox{
         display: flex;
         justify-content: space-between;
     }
-   #content #box{
-       width: 80%;
-       height: 80%;
-       justify-content: center;
-       align-items: center;
-       background-color: yellow;
-       display: flex;
-       border-radius: 0px 0px 0px 0px;
-   }
-   #content #box textarea{
-       width: 70%;
-       height: 60%;
-   }
+    #content #controller .inputBox .input{
+        width: 2.5vw;
+        height: 2.5vw;
+        background-color: var(--primaryColor);
+        color:white;
+        font-weight: bold;
+        font-size: 14px;
+        text-align: center;
+        border-radius: 45px;
+        border:none;
+        outline: none;
+        transition:250ms
+    }
+    #content #controller .inputBox .input:hover{
+        background-color: #d63031;
+    }
+    #content #controller .inputBox .input:focus{
+        background-color: #d63031;
+        border-radius: 10px;
+    }
+    #content #controller #code{
+        text-align: start;
+        align-self: center;
+        padding: 10px;
+        width: 80%;
+        height: 80%;
+        border-radius: 15px;
+        outline: none;
+        border: none;
+        background-color: var(--primaryColor);
+        color: white;
+        font-weight: bold;
+        font-size: 1vw;
+    }
