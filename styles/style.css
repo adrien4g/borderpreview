@@ -31,7 +31,7 @@ input{
     left: 50%;
     top: 50%;
     transform:translate(-50%, -50%);
-    width: 430px;
+    width: 500px;
     height: 430px;
     display: flex;
     flex-direction: column;
@@ -48,10 +48,16 @@ input{
         display: flex;
         justify-content: space-between;
     }
-    #content #box{
-        width: 60%;
-        height: 60%;
-        border: 30px solid var(--primary-color);
-        background-color: #white;
-    }
-    
+   #content #box{
+       width: 80%;
+       height: 80%;
+       justify-content: center;
+       align-items: center;
+       background-color: yellow;
+       display: flex;
+       border-radius: 0px 0px 0px 0px;
+   }
+   #content #box textarea{
+       width: 70%;
+       height: 60%;
+   }
